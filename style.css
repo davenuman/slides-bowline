@@ -1,0 +1,121 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+html, .remark-container {
+  background: #eee8d5;
+  background: #002b36;
+  color: #657b83;
+}
+body, .remark-slide-content {
+  background-color: #fdf6e3;
+  border: 1pt solid #93a1a1;
+  font-size: 30px;
+}
+code {
+  background-color: #eee8d5;
+}
+
+body {
+  font-family: 'Droid Serif';
+}
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.remark-slide-content h1 { font-size: 3em; }
+.remark-slide-content h2 { font-size: 2em; }
+.remark-slide-content h3 { font-size: 1.6em; }
+.footnote {
+  position: absolute;
+  bottom: 3em;
+}
+li p { line-height: 1.25em; }
+.red { color: #fa0000; }
+.large { font-size: 2em; }
+a, a > code {
+  color: rgb(249, 38, 114);
+  text-decoration: none;
+}
+code {
+  -moz-border-radius: 5px;
+  -web-border-radius: 5px;
+  background: #e7e8e2;
+  border-radius: 5px;
+}
+.remark-code, .remark-inline-code { font-family: 'Inconsolata'; }
+.remark-code-line-highlighted     { background-color: #373832; }
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ p {
+  clear: both;
+}
+#slideshow .slide .content code {
+  font-size: 0.9em;
+}
+#slideshow .slide .content pre code {
+  font-size: 0.9em;
+  padding: 15px;
+}
+.inverse {
+  background-color: #073642;
+  color: #839496;
+}
+.inverse h1, .inverse h2 {
+  color: #f3f3f3;
+  line-height: 0.8em;
+}
+
+/* Slide-specific styling */
+#slide-inverse .footnote {
+  bottom: 12px;
+  left: 20px;
+}
+#slide-how .slides {
+  font-size: 0.9em;
+  position: absolute;
+  top:  151px;
+  right: 140px;
+}
+#slide-how .slides h3 {
+  margin-top: 0.2em;
+}
+#slide-how .slides .first, #slide-how .slides .second {
+  padding: 1px 20px;
+  height: 90px;
+  width: 120px;
+}
+#slide-how .slides .first {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+}
+#slide-how .slides .second {
+  position: relative;
+  background: #fff;
+  z-index: 0;
+}
+
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+.remark-slide-scaler {
+  box-shadow: none;
+}
