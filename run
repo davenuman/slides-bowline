@@ -1,0 +1,1 @@
+docker run --name slides-bowline -p 9080:80 -v $(pwd):/usr/share/nginx/html:ro -d nginx
