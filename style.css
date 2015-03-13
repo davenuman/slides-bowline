@@ -21,6 +21,9 @@ h1, h2, h3 {
   font-weight: normal;
   margin-bottom: 0;
 }
+.remark-slide-content {
+  padding: 1em 1.4em;
+}
 .remark-slide-content h1 { font-size: 3em; }
 .remark-slide-content h2 { font-size: 2em; }
 .remark-slide-content h3 { font-size: 1.6em; }
@@ -38,8 +41,12 @@ a, a > code {
 code {
   -moz-border-radius: 5px;
   -web-border-radius: 5px;
-  background: #e7e8e2;
   border-radius: 5px;
+  background-color: #002b36;
+  color: #839496;
+  border: 1pt solid #586e75;
+  padding: 1em;
+  box-shadow: 5pt 5pt 8pt #073642;
 }
 .remark-code, .remark-inline-code { font-family: 'Inconsolata'; }
 .remark-code-line-highlighted     { background-color: #373832; }
@@ -119,3 +126,7 @@ code {
 .remark-slide-scaler {
   box-shadow: none;
 }
+
+.remark-slide-content table { margin: auto; }
+.remark-slide-content td { padding-right: 1em; }
+
