@@ -11,47 +11,65 @@ class: center
 ## Dockerizing Drupal Projects
 
 ![knot](images/320px-Palstek_innen.jpg)
+
+???
+Me:
+- Senior developer at CivicActions
+- Live in Hamilton. wife and 2yo daughter
+- Drupal 7+yrs, DevOps, woodworking, linux
+
+Only 13 slides but i removed at least as many while preparing this so do interrupt if i'm skipping over assumptions. But please save longer questions for the end.
+
 ---
 class: center
 # Developer Experience
-### UX for DevOps
+### UX for DevOps?
 
 ???
-Ask what might be involved in a positive DX
+We talk a lot about UX in our field. I want to talk about Developer Experience.
+
+Example: woodworking hobby.
 
 ---
-# Developer Experience
+class: center
+"It's not about the tools"
+ -- (often said in DevOps)
 
- - **Ramp up time**
-   - time it takes to start working on a project
+| Powerful | Elegant |
+|:---------|:--------|
+| ![planer](images/powerplaner.jpg) | ![plane](images/handplane.jpg)  |
+
+ ...but the tools are important.
+
+
+???
+The tools we use shape our developer experience.
+When I use a hand plane, I love the experience.
+It engages all my senses. keep developing a skill. Ready to use, no set up.
+But not just tools, attitude - frame of mind, culture.
+
+So, what might be involved in a positive DX?
+
+---
+# A Positive Developer Experience
+
+ - Minimal Ramp up time
  - Context switching
  - Intuitive Tools
- - Consistent patterns
+ - Learnable patterns
+ - Mastery
 
 ???
- - Autonomy - Mastery - Purpose
-
----
-###  Our Goals
-
- - Faster developer sandbox set up to get started on projects sooner.
-
- - Consistent software stack across developers, testing infrastructure, and production.
-
- - Ideally, a basic tool set that would work for both our new projects as well as our maintenance sites.
+ - Bullets kill.
 
 ---
 ## Motivation
-  - rapid, portable sandbox set up ...even on old maintenance sites
-  - consistent stack and tools across team and on ci testing server
-- requirements
-  - fig changed to docker compose
 
----
+> We desire a consistent system that provides rapid sandbox set up,
+> with flexibility for old and new Drupal projects
+> and can contain project specific infrastructure.
 
-- Use case: start a new Drupal 7 project
-
-### Improving the dev experience...
+> ...and also be used on ci server in the same way for testing.
 
 ---
 class: center
@@ -61,6 +79,19 @@ class: center
 | Virtual Machine | Virtual Environment  |
 
 ???
+
+Lots of options available. We chose docker.
+
+---
+class: center
+#Introducing Bowline
+
+![knot](images/320px-Palstek_innen.jpg)
+
+Bowline is a set of (hopefully) simple tools focussed on easing docker set up and collating project things.
+
+???
+Mostly bash
 
 
 ---
@@ -86,10 +117,10 @@ This is really important... when activated, new commands are available in your c
 ---
 ## Bowline activated
 
-```
+```bash
 Available commands:
-activate  bowline  composer  fix-perms	invoke_proxy  settings_init
-backup	  build    drush     import	run
+activate  bowline  composer  fix-perms  invoke_proxy  settings_init
+backup    build    drush     import     run
 
 Containers:
 db   ~  172.17.0.61
@@ -100,17 +131,27 @@ Proxy:
 
 ---
 class: center
+
+# Demo
+
+---
+
+class: center
 ![D8](images/drupal8.png)
 
 ???
 Yes, it works with D8.
 
 ---
-## Issues
+## General Issues to solve
 
 - Performance in boot2docker
 - Incomplete set of tools
 
+[https://github.com/davenuman/bowline/issues](https://github.com/davenuman/bowline/issues)
+
 ---
+class: inverse
 # Questions?
 .footnote[Slideshow created using [remark](http://github.com/gnab/remark).]
+

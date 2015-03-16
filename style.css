@@ -38,17 +38,20 @@ a, a > code {
   color: rgb(249, 38, 114);
   text-decoration: none;
 }
-code {
+pre code {
   -moz-border-radius: 5px;
   -web-border-radius: 5px;
   border-radius: 5px;
   background-color: #002b36;
+  display: block;
   color: #839496;
   border: 1pt solid #586e75;
   padding: 1em;
-  box-shadow: 5pt 5pt 8pt #073642;
 }
-.remark-code, .remark-inline-code { font-family: 'Inconsolata'; }
+.remark-code, .remark-inline-code {
+  font-family: 'Inconsolata';
+  font-size: 0.8em;
+}
 .remark-code-line-highlighted     { background-color: #373832; }
 .pull-left {
   float: left;
@@ -63,6 +66,7 @@ code {
 }
 #slideshow .slide .content code {
   font-size: 0.9em;
+  font-size: 1.5em;
 }
 #slideshow .slide .content pre code {
   font-size: 0.9em;
