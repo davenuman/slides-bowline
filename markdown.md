@@ -55,7 +55,6 @@ So, what might be involved in a positive DX?
 
  - Minimal Ramp up time
  - Context switching
- - Intuitive Tools
  - Learnable patterns
  - Mastery
 
@@ -93,6 +92,10 @@ Bowline is a set of (hopefully) simple tools focussed on easing docker set up an
 ???
 Mostly bash
 
+- Bowline objectives:
+ - minimize requirements (just needs docker 1.3+)
+ - containerize as much as possible
+ - hackability
 
 ---
 `. bin/activate`
@@ -141,6 +144,55 @@ class: center
 
 ???
 Yes, it works with D8.
+
+---
+## Hoist
+
+```bash
+~/workspace/bowline (bowline) » hoist
+Usage: hoist [rigging]
+Available riggings:
+behat  drupal-core-dev
+```
+
+---
+
+## bin/run (Simplified)
+
+```
+#!/usr/bin/env bash
+
+source $(dirname $0)/../lib/bowline/bowline
+enter_container
+
+# Check Drush.
+cd docroot
+../vendor/bin/drush st
+cd ..
+
+# Behat tests
+./vendor/bin/behat -c tests/behat/local.yml
+```
+
+---
+## bin/run (Simplified) with migration
+
+```
+#!/usr/bin/env bash
+
+source $(dirname $0)/../lib/bowline/bowline
+enter_container
+
+# Behat tests
+./vendor/bin/behat -c tests/behat/local.yml
+
+# Run Migration
+cd docroot
+../vendor/bin/drush migrate-deregister --orphans
+../vendor/bin/drush migrate-register
+../vendor/bin/drush migrate-import --group=globalnet --limit=$LIMIT --force
+../vendor/bin/drush migrate-status
+```
 
 ---
 ## General Issues to solve
