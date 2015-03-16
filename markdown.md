@@ -6,9 +6,11 @@ class: middle
 name: title
 class: center
 
-#Introduction to [Bowline](https://github.com/davenuman/bowline)
+## Introduction to [Bowline](https://github.com/davenuman/bowline)
 
-## Dockerizing Drupal Projects
+### Dockerizing Drupal Projects
+
+### http://davenuman.github.io/
 
 ![knot](images/320px-Palstek_innen.jpg)
 
@@ -159,7 +161,7 @@ behat  drupal-core-dev
 
 ## bin/run (Simplified)
 
-```
+```bash
 #!/usr/bin/env bash
 
 source $(dirname $0)/../lib/bowline/bowline
@@ -177,7 +179,7 @@ cd ..
 ---
 ## bin/run (Simplified) with migration
 
-```
+```bash
 #!/usr/bin/env bash
 
 source $(dirname $0)/../lib/bowline/bowline
