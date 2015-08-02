@@ -1,1 +1,9 @@
 docker run --name slides-bowline -p 9080:80 -v $(pwd):/usr/share/nginx/html:ro -d nginx
+
+echo running curl check
+RESULT=$(curl -ks --write-out %{http_code} --output /dev/null http://localhost:9080/)
+
+if [ "$RESULT" != "200" ]; then
+  echo problem with site
+  exit 1;
+fi
