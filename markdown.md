@@ -98,6 +98,9 @@ Mostly bash
  - minimize requirements (just needs docker 1.3+)
  - containerize as much as possible
  - hackability
+ - Use your own editor, etc
+
+- User perms issue solved.
 
 ---
 `. bin/activate`
